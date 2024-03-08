@@ -1,3 +1,27 @@
+administrate-rich-text
+A plugin for Rails 7+ to allow the use of ActionText rich_text_area fields in Administrate.
+
+ActionTexct is based on the Trix WYSIWYG editor.
+
+The Administrate field is compatible with Rails Active Storage, so Rails will seamlessly handle attachment storage in your Wysiwyg field.
+
+Install
+Add administrate-rich-textto your Gemfile:
+
+gem 'administrate-rich-text'
+Install:
+
+$ bundle install
+Add javascript and CSS files to the asset pipeline and manifest:
+
+$ rails g admin:actiontext_assets
+Usage
+Add an ActionText rich_text_area field to app/dashboards/foo_dashboard.rb:
+
+ATTRIBUTE_TYPES = {
+  bar: Field::RichTextArea
+}.freeze
+
 # Ruby on Rails Tutorial
 
 ## "hello, world!"
